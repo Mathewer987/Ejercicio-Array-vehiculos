@@ -17,14 +17,17 @@ public class AlquilerVehiculos : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
+            DesactivarVehiculos();
 
+            int t = Random.Range(0, vehiculos.Length);
+
+            vehiculos[t].SetActive(true);
         }   
     }
 
     void ResetearVehiculos()
     {
-        DesactivarVehiculos();
-        vehiculos[0].SetActive(true);
+        
 
     }
 
